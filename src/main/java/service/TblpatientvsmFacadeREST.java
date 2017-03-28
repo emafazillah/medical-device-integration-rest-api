@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  * @author emafazillah
  */
 @Stateless
-@Path("entity.tblpatientvsm")
+@Path("/tblpatientvsm")
 public class TblpatientvsmFacadeREST extends AbstractFacade<Tblpatientvsm> {
 
     @PersistenceContext(unitName = "mywildflyrestv2_mywildflyrestv2_war_1.0PU")
@@ -37,47 +37,47 @@ public class TblpatientvsmFacadeREST extends AbstractFacade<Tblpatientvsm> {
 
     @POST
     @Override
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({ MediaType.APPLICATION_JSON})
     public void create(Tblpatientvsm entity) {
         super.create(entity);
     }
 
     @PUT
-    @Path("{id}")
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("/{id}")
+    @Consumes({ MediaType.APPLICATION_JSON})
     public void edit(@PathParam("id") Long id, Tblpatientvsm entity) {
         super.edit(entity);
     }
 
     @DELETE
-    @Path("{id}")
+    @Path("/{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
 
     @GET
-    @Path("{id}")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("/{id}")
+    @Produces({ MediaType.APPLICATION_JSON})
     public Tblpatientvsm find(@PathParam("id") Long id) {
         return super.find(id);
     }
 
     @GET
     @Override
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({ MediaType.APPLICATION_JSON})
     public List<Tblpatientvsm> findAll() {
         return super.findAll();
     }
 
     @GET
-    @Path("{from}/{to}")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Path("/{from}/{to}")
+    @Produces({ MediaType.APPLICATION_JSON})
     public List<Tblpatientvsm> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
 
     @GET
-    @Path("count")
+    @Path("/count")
     @Produces(MediaType.TEXT_PLAIN)
     public String countREST() {
         return String.valueOf(super.count());
