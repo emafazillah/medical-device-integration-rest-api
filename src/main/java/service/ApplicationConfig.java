@@ -33,6 +33,7 @@ public class ApplicationConfig extends Application {
         resources.add(filter.Cors.class);
         resources.add(service.TbldeviceFacadeREST.class);
         resources.add(service.TbldevicesFacadeREST.class);
+        resources.add(service.TblpatienthiskkmFacadeREST.class);
         resources.add(service.TblpatientvsmFacadeREST.class);
         resources.add(service.TblpatientvsmsFacadeREST.class);
     }
