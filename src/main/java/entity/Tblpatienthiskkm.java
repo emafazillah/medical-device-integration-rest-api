@@ -47,6 +47,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Tblpatienthiskkm.findBySystolic", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.systolic = :systolic")
     , @NamedQuery(name = "Tblpatienthiskkm.findByTemperature", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.temperature = :temperature")
     , @NamedQuery(name = "Tblpatienthiskkm.findByWeight", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.weight = :weight")
+    , @NamedQuery(name = "Tblpatientvsms.findByBmi", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.bmi = :bmi")
     , @NamedQuery(name = "Tblpatienthiskkm.findByEtco2", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.etco2 = :etco2")
     , @NamedQuery(name = "Tblpatienthiskkm.findByPulsevolume", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.pulsevolume = :pulsevolume")
     , @NamedQuery(name = "Tblpatienthiskkm.findByCrt", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.crt = :crt")
@@ -109,6 +110,9 @@ public class Tblpatienthiskkm implements Serializable {
     @Size(max = 15)
     @Column(name = "weight")
     private String weight;
+    @Size(max = 15)
+    @Column(name = "bmi")
+    private String bmi;
     @Size(max = 15)
     @Column(name = "etco2")
     private String etco2;
@@ -275,6 +279,14 @@ public class Tblpatienthiskkm implements Serializable {
 
     public void setWeight(String weight) {
         this.weight = weight;
+    }
+
+    public String getBmi() {
+        return bmi;
+    }
+
+    public void setBmi(String bmi) {
+        this.bmi = bmi;
     }
 
     public String getEtco2() {
