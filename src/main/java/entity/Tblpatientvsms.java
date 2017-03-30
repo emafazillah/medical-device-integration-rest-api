@@ -44,8 +44,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Tblpatientvsms.findBySystolic", query = "SELECT t FROM Tblpatientvsms t WHERE t.systolic = :systolic")
     , @NamedQuery(name = "Tblpatientvsms.findByTemperature", query = "SELECT t FROM Tblpatientvsms t WHERE t.temperature = :temperature")
     , @NamedQuery(name = "Tblpatientvsms.findByWeight", query = "SELECT t FROM Tblpatientvsms t WHERE t.weight = :weight")
-    , @NamedQuery(name = "Tblpatientvsms.findByBmi", query = "SELECT t FROM Tblpatientvsms t WHERE t.bmi = :bmi")
-    , @NamedQuery(name = "Tblpatientvsms.findByPatientidLatest", query = "SELECT t FROM Tblpatientvsms t WHERE t.patientid = :patientid ORDER BY t.id DESC")})
+    , @NamedQuery(name = "Tblpatientvsms.findByBmi", query = "SELECT t FROM Tblpatientvsms t WHERE t.bmi = :bmi")})
 public class Tblpatientvsms implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -88,8 +88,9 @@ public class TblpatientvsmsFacadeREST extends AbstractFacade<Tblpatientvsms> {
     @Path("/patientid/{patientid}")
     @Produces({MediaType.APPLICATION_JSON})
     public Tblpatientvsms findByPatientId(@PathParam("patientid") BigInteger patientid) {
-        javax.persistence.Query q = em.createNamedQuery("Tblpatientvsms.findByPatientidLatest");
+        javax.persistence.Query q = em.createNativeQuery("SELECT t FROM Tblpatientvsms t WHERE t.patientid = :patientid ORDER BY t.date DESC");
         q.setParameter("patientid", patientid);
+        q.setMaxResults(1);
         return (Tblpatientvsms) q.getSingleResult();
     }
     
