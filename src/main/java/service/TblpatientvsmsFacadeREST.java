@@ -87,12 +87,20 @@ public class TblpatientvsmsFacadeREST extends AbstractFacade<Tblpatientvsms> {
     @GET
     @Path("/patientid/{patientid}")
     @Produces({MediaType.APPLICATION_JSON})
-    public List<Tblpatientvsms> findByPatientId(@PathParam("patientid") BigInteger patientid) {
+    public Tblpatientvsms findByPatientId(@PathParam("patientid") BigInteger patientid) {
+        javax.persistence.Query q = em.createNamedQuery("Tblpatientvsms.findByPatientidLatest");
+        q.setParameter("patientid", patientid);
+        return (Tblpatientvsms) q.getSingleResult();
+    }
+    
+    @GET
+    @Path("/listpatientid/{patientid}")
+    @Produces({MediaType.APPLICATION_JSON})
+    public List<Tblpatientvsms> listFindByPatientId(@PathParam("patientid") BigInteger patientid) {
         javax.persistence.Query q = em.createNamedQuery("Tblpatientvsms.findByPatientid");
         q.setParameter("patientid", patientid);
         return q.getResultList();
     }
-    
 
     @Override
     protected EntityManager getEntityManager() {
