@@ -85,7 +85,7 @@ public class TblpatientvsmsFacadeREST extends AbstractFacade<Tblpatientvsms> {
     }
     
     @GET
-    @Path("/{patientid}")
+    @Path("/patientid/{patientid}")
     @Produces({MediaType.APPLICATION_JSON})
     public List<Tblpatientvsms> findByPatientId(@PathParam("patientid") BigInteger patientid) {
         javax.persistence.Query q = em.createNamedQuery("Tblpatientvsms.findByPatientid");
