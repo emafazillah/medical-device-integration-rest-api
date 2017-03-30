@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Tblpatienthiskkm.findBySystolic", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.systolic = :systolic")
     , @NamedQuery(name = "Tblpatienthiskkm.findByTemperature", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.temperature = :temperature")
     , @NamedQuery(name = "Tblpatienthiskkm.findByWeight", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.weight = :weight")
-    , @NamedQuery(name = "Tblpatientvsms.findByBmi", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.bmi = :bmi")
+    , @NamedQuery(name = "Tblpatienthiskkm.findByBmi", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.bmi = :bmi")
     , @NamedQuery(name = "Tblpatienthiskkm.findByEtco2", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.etco2 = :etco2")
     , @NamedQuery(name = "Tblpatienthiskkm.findByPulsevolume", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.pulsevolume = :pulsevolume")
     , @NamedQuery(name = "Tblpatienthiskkm.findByCrt", query = "SELECT t FROM Tblpatienthiskkm t WHERE t.crt = :crt")
