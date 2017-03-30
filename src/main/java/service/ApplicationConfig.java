@@ -32,7 +32,9 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(filter.Cors.class);
         resources.add(service.TbldeviceFacadeREST.class);
+        resources.add(service.TbldevicesFacadeREST.class);
         resources.add(service.TblpatientvsmFacadeREST.class);
+        resources.add(service.TblpatientvsmsFacadeREST.class);
     }
     
 }
