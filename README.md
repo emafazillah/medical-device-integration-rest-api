@@ -1,3 +1,3 @@
 # mywildflyrestv2
 
-REST-API to consume from Openshift Cloud
+Medical Device Integration: REST-API to consume from Openshift Cloud (Data)
