@@ -1,3 +1,3 @@
-The OpenShift `jbossas` cartridge documentation can be found at:
+# mywildflyrestv2
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas/README.md
+REST-API to consume from Openshift Cloud
